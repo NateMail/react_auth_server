@@ -21,6 +21,7 @@ connection.on('connected', function() {
 
 // App Setup
 app.use(morgan('combined'));
+// will accept requests from anywhwere unless specified
 app.use(cors());
 app.use(bodyParser.json({ type: '*/*' }));
 router(app);
